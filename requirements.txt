@@ -1,0 +1,59 @@
+# ──────────────────────────────────────────────
+# requirements.txt
+# English-Hindi Neural Machine Translation
+# Transformer model (PyTorch) – Google Colab / local
+# ──────────────────────────────────────────────
+
+# ── Deep Learning ─────────────────────────────
+torch>=2.0.0                  # TransformerMT, DataLoader, AMP (autocast + GradScaler)
+torchvision                   # pulled in automatically with torch; listed for completeness
+
+# ── NLP / Embeddings ──────────────────────────
+fasttext-wheel>=0.9.2         # Hindi FastText vectors (cc.hi.300.bin)
+indic-nlp-library>=0.91       # Hindi tokenisation (indic_tokenize)
+spacy>=3.7.0                  # English tokenisation (en_core_web_sm)
+huggingface-hub>=0.20.0       # model / dataset hub utilities
+
+# ── Evaluation Metrics ────────────────────────
+sacrebleu>=2.3.1              # BLEU + chrF corpus scores
+rouge-score>=0.1.2            # ROUGE-1 / ROUGE-2 / ROUGE-L (Google implementation)
+rouge>=1.0.1                  # rouge.Rouge() wrapper used in the notebook
+
+# ── Data & Numerics ───────────────────────────
+pandas>=2.0.0                 # DataFrames for train/test sets
+numpy>=1.24.0                 # array operations & embedding matrix construction
+scipy>=1.11.0                 # imported at version-check step
+
+# ── Utilities ─────────────────────────────────
+tqdm>=4.66.0                  # progress bars for training / decoding loops
+matplotlib>=3.7.0             # imported at version-check step
+
+# ──────────────────────────────────────────────
+# POST-INSTALL STEPS  (run these after pip install)
+# ──────────────────────────────────────────────
+#
+# 1. Download the spaCy English model:
+#       python -m spacy download en_core_web_sm
+#
+# 2. Download Hindi FastText binary vectors (~4 GB):
+#       wget https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.hi.300.bin.gz
+#       gunzip cc.hi.300.bin.gz
+#
+# 3. Download GloVe 300-d English vectors (~1 GB):
+#       wget https://nlp.stanford.edu/data/glove.6B.zip
+#       unzip glove.6B.zip   # use glove.6B.300d.txt
+#
+# 4. Place your dataset JSON at the path expected by the notebook:
+#       2_merged_train_only (1).json   – training split
+#       (test JSON loaded from Google Drive / local path)
+#
+# ──────────────────────────────────────────────
+# NOTE ON fasttext vs fasttext-wheel
+# ──────────────────────────────────────────────
+# The notebook installs `fasttext` via `pip install fasttext`.
+# On some systems (especially Linux/Colab) the plain `fasttext`
+# package compiles from source and may fail without build tools.
+# `fasttext-wheel` provides a pre-built wheel and is a drop-in
+# replacement.  If you are on Colab, the plain `fasttext` package
+# works fine – you can replace fasttext-wheel with fasttext.
+# ──────────────────────────────────────────────
