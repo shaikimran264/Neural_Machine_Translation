@@ -185,9 +185,6 @@ All required files (dataset JSON, tokenized pickle files, trained model checkpoi
 
 **[Google Drive – Required Files](https://drive.google.com/file/d/1pvP1AB7Wgj89gkEWPQ762GmvuPTsgH8d/view?usp=sharing)**
 
-> Replace the link above with your actual **publicly shared** Google Drive folder URL.
-> Right-click the folder in Drive → *Share* → *Anyone with the link* → copy URL.
-
 ---
 
 ## How to Run
