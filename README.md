@@ -130,7 +130,7 @@ Embeddings are **fine-tuned** during training (not frozen).
 ## Project Structure
 
 ```
-├── main.ipynb            # Full pipeline: preprocessing → training → evaluation
+├── code.ipynb            # Full pipeline: preprocessing → training → evaluation
 ├── test.ipynb            # Inference + evaluation only (loads saved checkpoint)
 ├── requirements.txt      # Python dependencies
 └── README.md
