@@ -91,7 +91,6 @@ $$\text{ROUGE-L}_{F1} = \frac{(1+\beta^2) \cdot R_{lcs} \cdot P_{lcs}}{R_{lcs} +
 | Attention heads      | 6 |
 | Encoder layers       | 6 |
 | Decoder layers       | 6 |
-| Feed-forward dim     | 1024 |
 | Dropout              | 0.1 |
 | Max sequence length  | 50 (both languages) |
 
