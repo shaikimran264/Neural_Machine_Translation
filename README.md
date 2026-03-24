@@ -145,8 +145,8 @@ Embeddings are **fine-tuned** during training (not frozen).
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/your-repo-name
-cd your-repo-name
+git clone https://github.com/shaikimran264/Neural_Machine_Translation
+cd Neural_Machine_Translation
 ```
 
 ### 2. Install dependencies
@@ -190,7 +190,7 @@ All required files (dataset JSON, tokenized pickle files, trained model checkpoi
 
 ### Train + evaluate (reproduce all results):
 ```bash
-jupyter notebook main.ipynb
+jupyter notebook code.ipynb
 ```
 Run all cells top to bottom. Load required files from the Drive link above.
 
